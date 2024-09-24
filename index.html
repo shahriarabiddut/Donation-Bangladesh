@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-white lexend-font">
-    <header class="sticky top-0 z-[999] w-full">
-      <div class="navbar md:px-48 py-5 space-x-2">
+    <header class="sticky top-0 z-[999] w-full lg:w-9/12 md:w-10/12 mx-auto">
+      <div class="navbar py-5 flex gap-4">
         <div class="navbar-start sm:pl-2">
           <a href="../blog.html">
             <button class="btn bg-[#B4F461] text-xl text-black">Blog</button>
@@ -36,7 +36,26 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <!-- Top Part -->
+      <div class="divider my-0 h-0"></div>
+      <div class="topPart w-full lg:w-9/12 md:w-10/12 mx-auto">
+        <div class="pb-8 pt-10">
+          <div class="flex items-center justify-center gap-7">
+            <button class="btn bg-[#B4F461] text-xl text-black" id="donateTab">
+              Donation
+            </button>
+            <button
+              class="btn text-xl text-gray-600 font-normal"
+              id="historyTab"
+            >
+              History
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Donation Part -->
+    </main>
     <footer></footer>
   </body>
 </html>

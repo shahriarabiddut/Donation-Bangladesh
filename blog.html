@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <title>Blog - Donation Bangladesh</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body class="bg-white lexend-font">
+    <header class="sticky top-0 z-[999] w-full">
+      <div class="navbar md:px-48 py-5 space-x-2">
+        <div class="navbar-start sm:pl-2">
+          <a href="../home.html">
+            <button class="btn bg-[#B4F461] text-xl text-black">Home</button>
+          </a>
+        </div>
+        <div class="navbar-center sm:pr-2">
+          <div class="flex items-center md:gap-5 gap-4">
+            <img src="../assets/logo.png" alt="logo" />
+            <p class="text-xl text-black font-semibold">Donation Bangladesh</p>
+          </div>
+        </div>
+        <div class="navbar-end sm:pr-1">
+          <div class="flex items-center gap-1">
+            <img src="../assets/coin.png" alt="Currency" />
+            <p class="text-xl text-gray-500 font-semibold">
+              <span id="myTotalBalance">5500</span> BDT
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>
