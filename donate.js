@@ -1,6 +1,5 @@
-
-const noakhaliDonation = document.getElementById("donate1Button" );
-  
+ // Donate 1
+    const noakhaliDonation = document.getElementById("donate1Button" );
   noakhaliDonation.addEventListener("click", (event) => {
     event.preventDefault(); 
     
@@ -12,12 +11,38 @@ const noakhaliDonation = document.getElementById("donate1Button" );
         alert( "invaid amount");
         return;
       }
-    
-    // Donate 1
       donateCalculationAndHistory(donatedTotal,donateName,donateAmount,'donate1Amount');
   });
-
-  
+ // Donate 2
+  const feniDonation = document.getElementById("donate2Button" );
+  feniDonation.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    
+    const donateName = document.getElementById('donate2Name').innerText;
+    const donateBox = document.getElementById('donate2AmountBox');
+    const donatedTotal = parseFloat(document.getElementById('donate2Amount').innerText);
+    const donateAmount = parseFloat(donateBox.value);
+    if (donateAmount < 0 || isNaN(donateAmount)) {
+        alert( "invaid amount");
+        return;
+      }
+      donateCalculationAndHistory(donatedTotal,donateName,donateAmount,'donate2Amount');
+  });
+   // Donate 3
+const quotaDonation = document.getElementById("donate3Button" );
+quotaDonation.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    
+    const donateName = document.getElementById('donate3Name').innerText;
+    const donateBox = document.getElementById('donate3AmountBox');
+    const donatedTotal = parseFloat(document.getElementById('donate3Amount').innerText);
+    const donateAmount = parseFloat(donateBox.value);
+    if (donateAmount < 0 || isNaN(donateAmount)) {
+        alert( "invaid amount");
+        return;
+      }
+      donateCalculationAndHistory(donatedTotal,donateName,donateAmount,'donate3Amount');
+  });
 // Donation History Section
 const donationHistorySection = document.getElementById("donationHistorySection");
 
@@ -59,7 +84,7 @@ const closePopupBtn = document.getElementById('closePopup');
 const message = document.getElementById('message');
 function modal(amount,title){
     popupModal.classList.remove('hidden');
-    message.innerText = `${amount} Taka is Donated for ${title}`;
+    message.innerText = `${amount} Taka is Successfully Donated [${title}]`;
 }
 // Close the popup modal
 closePopupBtn.addEventListener('click', () => {
@@ -71,4 +96,21 @@ window.addEventListener('click', (e) => {
   if (e.target == popupModal) {
     popupModal.classList.add('hidden');
   }
+});
+const donationTab = document.getElementById('donationTab');
+const donationTabButton = document.getElementById('donationTabButton');
+const historyTab = document.getElementById('historyTab');
+const historyTabButton = document.getElementById('historyTabButton');
+// Toggle
+donationTabButton.addEventListener('click', () => {
+    historyTab.classList.add('hidden');
+    historyTabButton.classList.remove('bg-[#B4F461]');
+    donationTabButton.classList.add('bg-[#B4F461]');
+    donationTab.classList.remove('hidden');
+  });
+historyTabButton.addEventListener('click', () => {
+    donationTab.classList.add('hidden');
+    donationTabButton.classList.remove('bg-[#B4F461]');
+    historyTabButton.classList.add('bg-[#B4F461]');
+    historyTab.classList.remove('hidden');
 });

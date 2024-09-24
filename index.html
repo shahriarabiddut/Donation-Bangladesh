@@ -49,12 +49,15 @@
       <div class="topPart w-full lg:w-9/12 md:w-10/12 mx-auto">
         <div class="pb-8 pt-10">
           <div class="flex items-center justify-center gap-7">
-            <button class="btn bg-[#B4F461] text-xl text-black" id="donateTab">
+            <button
+              class="btn bg-[#B4F461] text-xl text-black"
+              id="donationTabButton"
+            >
               Donation
             </button>
             <button
               class="btn text-xl text-gray-600 font-normal"
-              id="historyTab"
+              id="historyTabButton"
             >
               History
             </button>
@@ -65,6 +68,7 @@
       <!-- Donation Part -->
       <section
         class="donationPart w-full lg:w-9/12 md:w-10/12 mx-auto pt-4 px-2 lg:px-0 md:px-0"
+        id="donationTab"
       >
         <!-- donate1 -->
         <div
@@ -225,11 +229,11 @@
       </section>
       <!-- Donation history Part -->
       <section
-        id="donationHistorySection"
-        class="w-full lg:w-9/12 md:w-10/12 mx-auto pt-4 px-2 lg:px-0 md:px-0"
+        id="historyTab"
+        class="hidden w-full lg:w-9/12 md:w-10/12 mx-auto pt-4 px-2 lg:px-0 md:px-0"
       >
         <div class="py-4 my-2" id="donationHistory">
-          <div
+          <!-- <div
             class="bg-white p-6 rounded border border-gray-600 border-solid mb-2"
           >
             <h4 class="text-xl font-bold text-gray-600">
@@ -239,7 +243,7 @@
               <span class="text-xl font-bold text-gray-600"> Date :</span>
               Date
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
