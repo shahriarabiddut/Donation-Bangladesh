@@ -12,13 +12,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="donate.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="./assets/coin.png" />
   </head>
   <body class="bg-white lexend-font">
     <header class="sticky top-0 z-[999] bg-[#c0bcbc85]">
       <nav class="w-full lg:w-9/12 md:w-10/12 mx-auto">
         <div class="navbar py-5 flex gap-4">
           <div class="navbar-start sm:pl-2">
-            <a href="../index.html">
+            <a href="https://shahriarabiddut.github.io/Donation-Bangladesh/">
               <button class="btn bg-[#B4F461] text-xl text-black border-none">
                 Home
               </button>
@@ -26,7 +27,7 @@
           </div>
           <div class="navbar-center sm:pr-2">
             <div class="flex items-center md:gap-5 gap-4">
-              <img src="../assets/logo.png" alt="logo" />
+              <img src="./assets/logo.png" alt="logo" />
               <p class="text-xl text-black font-semibold">
                 Donation Bangladesh
               </p>
@@ -34,7 +35,7 @@
           </div>
           <div class="navbar-end sm:pr-1">
             <div class="flex items-center gap-1">
-              <img src="../assets/coin.png" alt="Currency" />
+              <img src="./assets/coin.png" alt="Currency" />
               <p class="text-xl text-gray-500 font-semibold">
                 <span id="myTotalBalance">5500</span> BDT
               </p>
@@ -44,7 +45,166 @@
       </nav>
       <div class="divider my-0 h-0"></div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section class="w-full lg:w-9/12 md:w-10/12 mx-auto py-6">
+        <h1 class="text-3xl font-semibold text-center mb-10">
+          Frequently Asked Questions
+        </h1>
+        <div class="mb-6 border-b border-gray-300">
+          <button
+            class="w-full text-left flex justify-between items-center py-4 text-lg font-medium focus:outline-none"
+            onclick="toggleFAQ(1)"
+          >
+            <span>What is the document object model (DOM)?</span>
+            <span id="icon1" class="text-xl font-bold">+</span>
+          </button>
+          <div
+            id="answer1"
+            class="hidden overflow-hidden transition-height max-h-0"
+          >
+            <p class="text-gray-600 py-4">
+              The Document Object Model is a cross-platform and
+              language-independent interface that treats an HTML or XML document
+              as a tree structure wherein each node is an object representing a
+              part of the document. The DOM represents a document with a logical
+              tree.
+            </p>
+          </div>
+        </div>
+        <div class="mb-6 border-b border-gray-300">
+          <button
+            class="w-full text-left flex justify-between items-center py-4 text-lg font-medium focus:outline-none"
+            onclick="toggleFAQ(2)"
+          >
+            <span>How do you select an element from the DOM?</span>
+            <span id="icon2" class="text-xl font-bold">+</span>
+          </button>
+          <div
+            id="answer2"
+            class="hidden overflow-hidden transition-height max-h-0"
+          >
+            <p class="text-gray-600 py-4">
+              You can select an element from the DOM using methods like
+              <code class="bg-gray-200 p-1 rounded"
+                >document.getElementById()</code
+              >,
+              <code class="bg-gray-200 p-1 rounded"
+                >document.querySelector()</code
+              >,
+              <code class="bg-gray-200 p-1 rounded"
+                >document.getElementsByClassName()</code
+              >
+              <code class="bg-gray-200 p-1 rounded"
+                >document.getElementsByTagName()</code
+              >,<code class="bg-gray-200 p-1 rounded"
+                >document.querySelectorAll()</code
+              >. These methods allow you to access and manipulate DOM elements
+              programmatically.
+            </p>
+          </div>
+        </div>
+        <div class="mb-6 border-b border-gray-300">
+          <button
+            class="w-full text-left flex justify-between items-center py-4 text-lg font-medium focus:outline-none"
+            onclick="toggleFAQ(3)"
+          >
+            <span
+              >What is event delegation in the context of the DOM, and why is it
+              useful?</span
+            >
+            <span id="icon3" class="text-xl font-bold">+</span>
+          </button>
+          <div
+            id="answer3"
+            class="hidden overflow-hidden transition-height max-h-0"
+          >
+            <p class="text-gray-600 py-4">
+              Event delegation is a technique where a single event listener is
+              attached to a parent element instead of attaching listeners to
+              individual child elements. This is useful for handling events
+              efficiently, especially when dealing with dynamically added
+              elements, because the parent can capture events from its children
+              using the concept of event bubbling.To know more
+              <a
+                href="https://www.geeksforgeeks.org/event-delegation-in-javascript"
+                ><code class="bg-gray-200 p-1 rounded"
+                  >https://www.geeksforgeeks.org/event-delegation-in-javascript/</code
+                ></a
+              >
+              .
+            </p>
+          </div>
+        </div>
+        <div class="mb-6 border-b border-gray-300">
+          <button
+            class="w-full text-left flex justify-between items-center py-4 text-lg font-medium focus:outline-none"
+            onclick="toggleFAQ(4)"
+          >
+            <span
+              >How do you manipulate an element's attributes and style using the
+              DOM?</span
+            >
+            <span id="icon4" class="text-xl font-bold">+</span>
+          </button>
+          <div
+            id="answer4"
+            class="hidden overflow-hidden transition-height max-h-0"
+          >
+            <p class="text-gray-600 py-4">
+              You can manipulate an element's attributes using methods like
+              <code class="bg-gray-200 p-1 rounded">setAttribute()</code> and
+              <code class="bg-gray-200 p-1 rounded">getAttribute()</code>. To
+              modify styles, you can access the
+              <code class="bg-gray-200 p-1 rounded">style</code> property of the
+              element, like this:
+              <code class="bg-gray-200 p-1 rounded"
+                >element.style.color = 'blue';</code
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-center bg-[#c0bcbcd3] p-10 text-white mt-6">
+      <section class="flex flex-col w-full">
+        <div class="flex items-center md:gap-5 gap-4">
+          <img src="./assets/logo.png" alt="logo" />
+          <p class="text-xl text-black font-semibold">Donation Bangladesh</p>
+        </div>
+        <div
+          class="text-gray-500 text-center w-full lg:w-8/12 md:w-9/12 mx-auto pt-8"
+        >
+          All Rights Reserved @2024
+        </div>
+      </section>
+    </footer>
+    <script>
+      let currentOpenFAQ = null;
+
+      function toggleFAQ(faqNumber) {
+        const answer = document.getElementById("answer" + faqNumber);
+        const icon = document.getElementById("icon" + faqNumber);
+        if (currentOpenFAQ && currentOpenFAQ !== faqNumber) {
+          document
+            .getElementById("answer" + currentOpenFAQ)
+            .classList.add("hidden");
+          document.getElementById("answer" + currentOpenFAQ).style.maxHeight =
+            "0";
+          document.getElementById("icon" + currentOpenFAQ).textContent = "+";
+        }
+
+        if (answer.classList.contains("hidden")) {
+          answer.classList.remove("hidden");
+          icon.textContent = "-";
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          currentOpenFAQ = faqNumber;
+        } else {
+          answer.classList.add("hidden");
+          icon.textContent = "+";
+          answer.style.maxHeight = "0";
+          currentOpenFAQ = null;
+        }
+      }
+    </script>
   </body>
 </html>
