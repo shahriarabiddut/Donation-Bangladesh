@@ -6,7 +6,8 @@
     const donateName = document.getElementById('donate1Name').innerText;
     const donateBox = document.getElementById('donate1AmountBox');
     const donatedTotal = parseFloat(document.getElementById('donate1Amount').innerText);
-    const donateAmount = parseFloat(donateBox.value);
+    const donateAmount = parseFloat(donateBox.value); 
+    donateBox.value = '';
     if (donateAmount < 0 || isNaN(donateAmount)) {
         alert( "invaid amount");
         return;
@@ -21,7 +22,8 @@
     const donateName = document.getElementById('donate2Name').innerText;
     const donateBox = document.getElementById('donate2AmountBox');
     const donatedTotal = parseFloat(document.getElementById('donate2Amount').innerText);
-    const donateAmount = parseFloat(donateBox.value);
+    const donateAmount = parseFloat(donateBox.value); 
+    donateBox.value = '';
     if (donateAmount < 0 || isNaN(donateAmount)) {
         alert( "invaid amount");
         return;
@@ -36,17 +38,18 @@ quotaDonation.addEventListener("click", (event) => {
     const donateName = document.getElementById('donate3Name').innerText;
     const donateBox = document.getElementById('donate3AmountBox');
     const donatedTotal = parseFloat(document.getElementById('donate3Amount').innerText);
-    const donateAmount = parseFloat(donateBox.value);
+    const donateAmount = parseFloat(donateBox.value); 
+    donateBox.value = '';
     if (donateAmount < 0 || isNaN(donateAmount)) {
         alert( "invaid amount");
         return;
       }
       donateCalculationAndHistory(donatedTotal,donateName,donateAmount,'donate3Amount');
   });
-// Donation History Section
-const donationHistorySection = document.getElementById("donationHistorySection");
-
-const donateCalculationAndHistory = (donatedTotal, title,amount,id) => {
+  
+  const donateCalculationAndHistory = (donatedTotal, title,amount,id) => {
+    // Donation History Section
+    const donationHistorySection = document.getElementById("donationHistorySection");
     //Balance
     const myTotalBalanceID = document.getElementById("myTotalBalance");
     const myTotalBalance = parseFloat(myTotalBalanceID.innerText);
@@ -60,8 +63,8 @@ const donateCalculationAndHistory = (donatedTotal, title,amount,id) => {
     // Reducing Balance
     myCurrentBalance = myTotalBalance - amount;
     myTotalBalanceID.innerText = myCurrentBalance;
-  
-
+    //Popup
+    modal(amount,title);
     const div = document.createElement("div");
     div.className =
         "bg-white p-6 rounded border border-gray-600 border-solid mb-2";
@@ -73,7 +76,6 @@ const donateCalculationAndHistory = (donatedTotal, title,amount,id) => {
                 <span class="text-xl font-bold text-gray-600"> Date :</span> ${new Date()}
                         </div>`;
     donationHistorySection.appendChild(div);
-    modal(amount,title);
 };
 
 // Modal
@@ -84,7 +86,7 @@ const closePopupBtn = document.getElementById('closePopup');
 const message = document.getElementById('message');
 function modal(amount,title){
     popupModal.classList.remove('hidden');
-    message.innerText = `${amount} Taka is Successfully Donated [${title}]`;
+    message.innerText = `${amount} Taka is Successfully Donated [Fund : ${title}]`;
 }
 // Close the popup modal
 closePopupBtn.addEventListener('click', () => {
@@ -97,6 +99,7 @@ window.addEventListener('click', (e) => {
     popupModal.classList.add('hidden');
   }
 });
+// Toggles
 const donationTab = document.getElementById('donationTab');
 const donationTabButton = document.getElementById('donationTabButton');
 const historyTab = document.getElementById('historyTab');
